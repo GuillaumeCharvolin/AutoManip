@@ -21,7 +21,7 @@ markdown:
     - pymdownx.critic
     - pymdownx.details
     - pymdownx.emoji:
-        emoji_generator: !!python/name:pymdownx.emoji.to_alt
+        emoji_generator: to_alt
     - pymdownx.inlinehilite
     - pymdownx.keys
     - pymdownx.mark

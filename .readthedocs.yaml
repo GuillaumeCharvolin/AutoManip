@@ -1,28 +1,24 @@
+# .readthedocs.yaml
 version: 2
+
 build:
-  os: ubuntu-lts-latest
+  os: ubuntu-lts-latest # ubuntu-22.04 is the current LTS alias
   tools:
     python: "3.10"
+
 formats:
  - htmlzip
  - pdf
+
 sphinx:
   configuration: docs/conf.py
-markdown:
-  extensions:
-    - admonitions
-    - codehilite(guess_lang=False)
-    - footnotes
-    - pymdownx.arithmatex
-    - pymdownx.betterem(smart_enable=all)
-    - pymdownx.caret
-    - pymdownx.critic
-    - pymdownx.details
-    - pymdownx.emoji
-    - pymdownx.inlinehilite
-    - pymdownx.keys
-    - pymdownx.mark
-    - pymdownx.smartsymbols
-    - pymdownx.superfences
-    - pymdownx.tasklist
-    - pymdownx.tilde
+
+# Define python requirements
+python:
+  install:
+    - requirements: docs/requirements.txt
+    # Alternatively, list packages directly:
+    # - method: pip
+    #   packages:
+    #     - myst-parser
+    #     - pymdown-extensions

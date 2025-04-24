@@ -6,6 +6,8 @@ build:
 formats:
  - htmlzip
  - pdf
+sphinx:
+  configuration: docs/conf.py
 markdown:
   version: ">= 3.0"
   extensions:

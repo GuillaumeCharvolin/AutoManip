@@ -1,14 +1,11 @@
 version: 2
-
 build:
-  os: ubuntu-latest
+  os: ubuntu-lts-latest
   tools:
     python: "3.10"
-
 formats:
  - htmlzip
  - pdf
-
 markdown:
   version: ">= 3.0"
   extensions:
@@ -20,8 +17,7 @@ markdown:
     - pymdownx.caret
     - pymdownx.critic
     - pymdownx.details
-    - pymdownx.emoji:
-        emoji_generator: to_alt
+    - pymdownx.emoji
     - pymdownx.inlinehilite
     - pymdownx.keys
     - pymdownx.mark

@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  ros2:
+    image: osrf/ros:foxy-desktop
+    container_name: ros2-container
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - ./ros2_workspace:/ros2_workspace
+    working_dir: /ros2_workspace
+    command: tail -f /dev/null
+
+    privileged: true
+    networks:
+      - ros_network
+
+networks:
+  ros_network:
+    driver: bridge

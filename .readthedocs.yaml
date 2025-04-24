@@ -9,7 +9,6 @@ formats:
 sphinx:
   configuration: docs/conf.py
 markdown:
-  version: ">= 3.0"
   extensions:
     - admonitions
     - codehilite(guess_lang=False)
